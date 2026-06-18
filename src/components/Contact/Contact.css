@@ -1,0 +1,17 @@
+.contact {
+  scroll-margin-top: 80px;
+}
+
+.contact__toast {
+  position: fixed;
+  bottom: var(--space-2xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-toast);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+}
