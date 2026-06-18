@@ -25,7 +25,7 @@ export function Skills() {
             </ul>
           </div>
 
-          <div className="os-section__block">
+          <div className="os-section__block skills__tools">
             <h3 className="os-section__kicker">Tools & Platforms</h3>
             <ul className="os-tools">
               {tools.map((tool) => (

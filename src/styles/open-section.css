@@ -517,6 +517,11 @@
     gap: var(--space-xs);
   }
 
+  .os-tools {
+    justify-content: center;
+    gap: var(--space-lg) var(--space-xl);
+  }
+
   .os-tools__item {
     flex: 0 1 calc(33.333% - var(--space-md));
     min-width: 0;
@@ -530,7 +535,13 @@
 }
 
 @media (max-width: 479px) {
+  .os-tools {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .os-tools__item {
-    flex: 0 1 calc(50% - var(--space-sm));
+    flex: none;
+    width: auto;
   }
 }
