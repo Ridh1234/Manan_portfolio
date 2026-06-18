@@ -1,0 +1,67 @@
+:root {
+  /* Backgrounds — pure neutral dark (Vault Graphite) */
+  --color-bg-primary: oklch(0.1 0.005 260);
+  --color-bg-elevated: oklch(0.14 0.008 260);
+  --color-bg-tertiary: oklch(0.18 0.01 260);
+  --color-border: oklch(0.24 0.012 260);
+
+  /* Text — solid contrast on photo backgrounds */
+  --color-text-primary: oklch(0.97 0.01 85);
+  --color-text-secondary: oklch(0.9 0.012 85);
+  --color-text-tertiary: oklch(0.76 0.012 85);
+
+  /* Accents — Champagne gold (hero palette) */
+  --color-accent-primary: oklch(0.74 0.09 85);
+  --color-accent-primary-hover: oklch(0.78 0.095 85);
+  --color-accent-secondary: oklch(0.74 0.09 85);
+  --color-accent-tertiary: oklch(0.74 0.09 85);
+  --color-warning: oklch(0.76 0.12 85);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-hero: clamp(2.5rem, 5vw, 4.5rem);
+  --text-section: clamp(1.75rem, 3vw, 2.5rem);
+  --text-body: 1rem;
+  --text-small: 0.8125rem;
+  --text-overline: 0.6875rem;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* Layout */
+  --max-width: 1200px;
+  --nav-height: 64px;
+  --section-padding: var(--space-4xl);
+  --container-padding: clamp(24px, 5vw, 80px);
+
+  /* Site background — swap filename to try bg2.png, bg33.png, etc. */
+  --site-bg-image: url('/backgrounds/bg33.png');
+  --site-bg-overlay: oklch(0.08 0.005 260 / 0.22);
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
+  --transition-smooth: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Z-index */
+  --z-nav: 50;
+  --z-overlay: 100;
+  --z-toast: 200;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --nav-height: 56px;
+    --section-padding: var(--space-3xl);
+  }
+}
