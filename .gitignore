@@ -36,7 +36,5 @@ SKILL11.md
 cursor-designer-skills.zip
 Manan Jain-CV.pdf
 
-# Duplicate background images (canonical copies in public/backgrounds/)
-/backgrund.png
-/bg2.png
-/bg33.png
+# Unused local assets
+src/assets/hero.png
