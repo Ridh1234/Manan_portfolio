@@ -99,6 +99,16 @@ export function Navigation() {
         inert={!menuOpen}
       >
         <nav className="nav__overlay-nav" aria-label="Mobile navigation">
+          <div className="nav__overlay-top">
+            <button
+              type="button"
+              className="nav__overlay-close"
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+            >
+              <X size={22} aria-hidden="true" />
+            </button>
+          </div>
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}

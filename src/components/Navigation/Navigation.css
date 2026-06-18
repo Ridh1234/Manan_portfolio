@@ -207,6 +207,7 @@
 .nav__link:focus-visible,
 .nav__cta:focus-visible,
 .nav__hamburger:focus-visible,
+.nav__overlay-close:focus-visible,
 .nav__overlay-link:focus-visible,
 .nav__overlay-cta:focus-visible {
   outline: 2px solid color-mix(in oklch, var(--color-accent-primary) 85%, white);
@@ -282,11 +283,35 @@ body.nav-menu-open {
     backdrop-filter: blur(20px) saturate(140%);
   }
 
+  .nav__overlay-top {
+    display: flex;
+    justify-content: flex-end;
+    margin: calc(var(--space-xs) * -1) 0 0;
+  }
+
+  .nav__overlay-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-text-primary);
+    border: 1px solid color-mix(in oklch, white 11%, transparent);
+    border-radius: 50%;
+    background: color-mix(in oklch, black 16%, transparent);
+    transition: background var(--transition-fast);
+  }
+
+  .nav__overlay-close:hover,
+  .nav__overlay-close:focus-visible {
+    background: color-mix(in oklch, white 8%, transparent);
+  }
+
   .nav__overlay-link {
     min-height: 58px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0 var(--space-md);
     border-radius: 18px;
     color: var(--color-text-primary);
@@ -300,15 +325,6 @@ body.nav-menu-open {
   .nav__overlay-link:hover,
   .nav__overlay-link:focus-visible {
     background: color-mix(in oklch, white 7%, transparent);
-  }
-
-  .nav__overlay-link::after {
-    content: attr(href);
-    color: var(--color-text-tertiary);
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0;
   }
 
   .nav__overlay-cta {
