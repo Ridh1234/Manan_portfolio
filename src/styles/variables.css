@@ -45,8 +45,8 @@
   --section-padding: var(--space-4xl);
   --container-padding: clamp(24px, 5vw, 80px);
 
-  /* Site background — swap filename to try bg2.png, bg33.png, etc. */
-  --site-bg-image: url('/backgrounds/bg33.png');
+  /* Site background */
+  --site-bg-image: url('/backgrounds/backgrund.png');
   --site-bg-overlay: oklch(0.08 0.005 260 / 0.22);
 
   /* Transitions */

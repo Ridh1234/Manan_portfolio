@@ -123,6 +123,64 @@
   text-wrap: pretty;
 }
 
+.os-section__prose--follow {
+  margin-top: var(--space-lg);
+}
+
+/* Anonymized mandate glimpses */
+.os-deals {
+  display: grid;
+  gap: clamp(var(--space-lg), 3vw, var(--space-xl));
+}
+
+.os-deal {
+  padding: clamp(var(--space-md), 2.5vw, var(--space-lg)) 0;
+  border-top: 1px solid oklch(1 0 0 / 0.1);
+}
+
+.os-deal:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.os-deal__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-sm);
+}
+
+.os-deal__sector {
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1.2vw, 1.25rem);
+  font-weight: 600;
+  color: var(--os-text);
+  text-shadow: var(--os-shadow-tight), var(--os-shadow-soft);
+}
+
+.os-deal__thesis {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--os-gold);
+  text-shadow: var(--os-shadow-tight);
+}
+
+.os-deal__body {
+  margin: 0;
+  max-width: 72ch;
+  font-size: clamp(1rem, 1.05vw, 1.0625rem);
+  font-weight: 500;
+  line-height: 1.75;
+  color: color-mix(in oklch, var(--os-text) 92%, transparent);
+  text-shadow: var(--os-shadow-tight), var(--os-shadow-soft);
+  text-wrap: pretty;
+}
+
 .os-section__foot {
   display: grid;
   grid-template-columns: auto 1fr;

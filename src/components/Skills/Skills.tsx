@@ -9,7 +9,11 @@ export function Skills() {
         <header className="os-section__header">
           <div className="os-section__header-main">
             <p className="os-section__overline">Capabilities</p>
-            <h2 className="os-section__title">Skills</h2>
+            <h2 className="os-section__title">Capabilities</h2>
+            <p className="os-section__subtitle">
+              Capabilities applied across the investment process—from sector research
+              and commercial diligence through investment committee execution.
+            </p>
           </div>
         </header>
 

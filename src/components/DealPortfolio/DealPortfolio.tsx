@@ -1,4 +1,10 @@
-import { scopeSummary, sectors, trackRecordMetrics, transactionStructures } from '../../data/deals';
+import {
+  dealGlimpses,
+  scopeSummary,
+  sectors,
+  trackRecordMetrics,
+  transactionStructures,
+} from '../../data/deals';
 import './DealPortfolio.css';
 
 export function DealPortfolio() {
@@ -8,10 +14,12 @@ export function DealPortfolio() {
         <header className="os-section__header">
           <div className="os-section__header-main">
             <p className="os-section__overline">Track Record</p>
-            <h2 className="os-section__title">Transaction Experience</h2>
+            <h2 className="os-section__title">Mandate Experience</h2>
             <p className="os-section__subtitle">
-              Aggregate mid-market private credit exposure. Mandate and counterparty
-              details remain confidential.
+              Sector coverage and representative mandates over the past two years.
+              Counterparty identities are confidential; the summaries below describe
+              mandate profile and analytical scope without disclosure of underlying
+              companies.
             </p>
           </div>
         </header>
@@ -43,14 +51,29 @@ export function DealPortfolio() {
           </div>
 
           <div className="os-section__block">
-            <h3 className="os-section__kicker">Structures</h3>
-            <ul className="registry-tags os-tags os-tags--start" aria-label="Transaction structures">
+            <h3 className="os-section__kicker">Mandate Types</h3>
+            <ul className="registry-tags os-tags os-tags--start" aria-label="Mandate types">
               {transactionStructures.map((structure) => (
                 <li key={structure} className="registry-tags__item">
                   {structure}
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="os-section__block">
+            <h3 className="os-section__kicker">Selected Mandates</h3>
+            <div className="os-deals" role="list">
+              {dealGlimpses.map((deal) => (
+                <article key={deal.id} className="os-deal" role="listitem">
+                  <header className="os-deal__head">
+                    <span className="os-deal__sector">{deal.sector}</span>
+                    <span className="os-deal__thesis">{deal.thesis}</span>
+                  </header>
+                  <p className="os-deal__body">{deal.description}</p>
+                </article>
+              ))}
+            </div>
           </div>
 
           <footer className="os-section__foot">

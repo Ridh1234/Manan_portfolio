@@ -1,9 +1,8 @@
 import './About.css';
 
 const glanceItems = [
-  'Based in Mumbai',
-  'B.Com, H.R. College',
-  'ICAI Member',
+  'Mumbai, India',
+  'KPMG · True North',
 ];
 
 export function About() {
@@ -22,13 +21,29 @@ export function About() {
           <div className="os-section__block">
             <h3 className="os-section__kicker">Background</h3>
             <p className="os-section__prose">
-              As Investment Analyst at True North&apos;s Private Credit Fund, I lead
-              structured credit transactions of ₹60–250 Cr across India&apos;s
-              mid-market — from origination and financial diligence through credit
-              structuring, documentation, and portfolio monitoring. A Chartered
-              Accountant with statutory audit experience at KPMG across
-              manufacturing, FMCG, and chemical sectors, I bring institutional-grade
-              analytical rigor to every capital deployment.
+              Professional training began at KPMG, with approximately 1.5 years in
+              statutory audit across listed and private companies—establishing a
+              foundation in accounting, financial reporting, and operational
+              understanding of businesses. The long-term orientation has consistently
+              been toward investing and rigorous business evaluation.
+            </p>
+            <p className="os-section__prose os-section__prose--follow">
+              In April 2024, joined True North&apos;s investment platform—a 25-year-old
+              firm with over $4 billion deployed across India. Given a lean team
+              structure and high deal velocity, assumed meaningful responsibility
+              early across the investment process: industry research, financial
+              modelling, management discussions, commercial diligence, investment
+              committee presentations, and transaction execution.
+            </p>
+            <p className="os-section__prose os-section__prose--follow">
+              A substantial share of mandate exposure has been in growth-capital and
+              equity-substitute transactions, rather than traditional asset-backed
+              lending. This has required sustained commercial diligence—industry expert
+              engagement, management assessment, and conviction-building around market
+              size, competitive positioning, scalability, and exit pathways—alongside
+              the discipline of structured underwriting. The combination reflects both
+              analytical rigour and a long-term perspective on how businesses create
+              value.
             </p>
           </div>
 

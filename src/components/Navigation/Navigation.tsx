@@ -53,7 +53,6 @@ export function Navigation({ visible = true }: NavigationProps) {
           </span>
           <span className="nav__brand-copy">
             <span className="nav__brand-name">Manan Jain</span>
-            <span className="nav__brand-role">Private Credit</span>
           </span>
         </a>
 

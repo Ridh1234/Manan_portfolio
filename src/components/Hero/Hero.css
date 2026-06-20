@@ -14,6 +14,10 @@
   visibility: hidden;
 }
 
+.hero--intro {
+  min-height: 100svh;
+}
+
 .hero--ready .hero__grid {
   opacity: 1;
   visibility: visible;
@@ -42,12 +46,12 @@
   max-width: 72px;
 }
 
-.hero__name {
+.hero__identity {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.45em;
-  margin: 0 0 var(--space-sm);
+  gap: 0.55em;
+  margin: 0 0 var(--space-md);
   font-family: var(--font-display);
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   font-weight: 500;
@@ -55,17 +59,33 @@
   letter-spacing: 0.01em;
 }
 
-.hero__name-ca {
+.hero__identity-name {
+  color: var(--color-text-primary);
+  letter-spacing: 0.04em;
+}
+
+.hero__identity-sep {
+  color: color-mix(in oklch, var(--color-text-primary) 42%, transparent);
+  font-weight: 400;
+}
+
+.hero__identity-cred {
   color: var(--color-accent-primary);
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
+}
+
+.hero__identity-rank {
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.hero__name-text {
-  color: var(--color-text-primary);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.hero__identity-rank-num {
+  font-family: var(--font-mono);
+  font-size: 1.08em;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
 }
 
 .hero__headline {

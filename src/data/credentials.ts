@@ -26,13 +26,13 @@ export const credentials: Credential[] = [
     title: 'CA Intermediate',
     institution: 'Institute of Chartered Accountants of India',
     year: '2022',
-    detail: 'All India Rank 34',
+    detail: 'Completed',
   },
 ];
 
 export const achievements = [
   'CA Final - Distinction',
-  'CA Intermediate - All India Rank 34',
+  'CA (AIR 34)',
   'Kudos Award at KPMG (2023)',
   'District-level Volleyball and Table Tennis',
 ];

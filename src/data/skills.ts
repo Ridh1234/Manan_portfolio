@@ -13,12 +13,12 @@ export type ToolItem = {
 };
 
 export const coreCompetencies: SkillItem[] = [
-  { id: 'diligence', label: 'Financial & Commercial Diligence', hue: 205 },
+  { id: 'industry-research', label: 'Industry & Sector Research', hue: 205 },
   { id: 'modelling', label: 'Financial Modelling', hue: 285 },
-  { id: 'ic-memo', label: 'IC Memo Preparation', hue: 55 },
-  { id: 'monitoring', label: 'Portfolio Monitoring', hue: 165 },
-  { id: 'structuring', label: 'Deal Structuring', hue: 25 },
-  { id: 'credit', label: 'Credit Analysis', hue: 250 },
+  { id: 'commercial', label: 'Commercial Diligence', hue: 55 },
+  { id: 'management', label: 'Management & Expert Discussions', hue: 165 },
+  { id: 'ic-memo', label: 'Investment Committee Memos', hue: 25 },
+  { id: 'business-eval', label: 'Business Evaluation & Underwriting', hue: 250 },
 ];
 
 export const tools: ToolItem[] = [

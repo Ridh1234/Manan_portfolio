@@ -3,9 +3,9 @@ import { HeroCinematic } from './HeroCinematic';
 import './Hero.css';
 
 const CREDENTIALS = [
-  { label: 'Current Role', value: 'Investment Analyst, True North Private Credit' },
-  { label: 'Transaction Work', value: '₹60–250 Cr structured credit transactions' },
-  { label: 'Foundation', value: 'CA Final distinction; KPMG Audit & Assurance' },
+  { label: 'Mandate Focus', value: 'Business evaluation and long-term value creation' },
+  { label: 'Platform', value: 'True North · Mumbai' },
+  { label: 'Foundation', value: 'Statutory audit · KPMG' },
 ];
 
 type HeroProps = {
@@ -29,22 +29,31 @@ export function Hero({ introComplete, onIntroComplete }: HeroProps) {
       <div className="container hero__grid">
         <div className="hero__content">
           <p className="hero__overline section-overline">
-            Investment Analyst @ True North
+            Investment Analyst · Mumbai
           </p>
 
-          <p className="hero__name" aria-label="CA Manan Jain">
-            <span className="hero__name-ca">CA</span>
-            <span className="hero__name-text">Manan Jain</span>
+          <p className="hero__identity" aria-label="Manan Jain, CA All India Rank 34">
+            <span className="hero__identity-name">Manan Jain</span>
+            <span className="hero__identity-sep" aria-hidden="true">
+              |
+            </span>
+            <span className="hero__identity-cred">
+              CA (
+              <span className="hero__identity-rank">
+                AIR-<span className="hero__identity-rank-num data-metric">34</span>
+              </span>
+              )
+            </span>
           </p>
 
           <h1 className="hero__headline">
-            Disciplined credit analysis for mid-market transactions.
+            Building investment conviction through rigorous business analysis.
           </h1>
 
           <p className="hero__subheadline">
-            Chartered Accountant working across private credit execution,
-            financial diligence, credit structuring, documentation, and
-            portfolio monitoring.
+            Grounded in statutory audit at KPMG; presently at True North, where
+            responsibilities span industry research, commercial diligence, financial
+            modelling, and investment committee execution on growth-oriented mandates.
           </p>
 
           <div className="hero__ctas">
@@ -56,7 +65,7 @@ export function Hero({ introComplete, onIntroComplete }: HeroProps) {
 
         <aside className="hero__dossier" aria-label="Credential snapshot">
           <div className="hero__dossier-header">
-            <span className="hero__dossier-kicker">Credential Snapshot</span>
+            <span className="hero__dossier-kicker">Profile</span>
             <span className="hero__dossier-year data-metric">2026</span>
           </div>
 
@@ -65,7 +74,7 @@ export function Hero({ introComplete, onIntroComplete }: HeroProps) {
               CA
             </span>
             <div>
-              <p className="hero__dossier-title">Private Credit Analyst</p>
+              <p className="hero__dossier-title">Investment Analyst</p>
             </div>
           </div>
 
