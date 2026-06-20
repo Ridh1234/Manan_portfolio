@@ -6,6 +6,23 @@
   padding-bottom: var(--space-lg);
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+}
+
+.hero--intro .hero__grid {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero--ready .hero__grid {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+.hero__grid {
+  position: relative;
+  z-index: 3;
 }
 
 .hero__grid {

@@ -1,3 +1,5 @@
+import { useCallback } from 'react';
+import { HeroCinematic } from './HeroCinematic';
 import './Hero.css';
 
 const CREDENTIALS = [
@@ -6,13 +8,24 @@ const CREDENTIALS = [
   { label: 'Foundation', value: 'CA Final distinction; KPMG Audit & Assurance' },
 ];
 
-export function Hero() {
+type HeroProps = {
+  introComplete: boolean;
+  onIntroComplete: () => void;
+};
+
+export function Hero({ introComplete, onIntroComplete }: HeroProps) {
+  const handleIntroComplete = useCallback(() => {
+    onIntroComplete();
+  }, [onIntroComplete]);
+
   const scrollToDeals = () => {
     document.getElementById('deals')?.scrollIntoView();
   };
 
   return (
-    <section className="hero" id="hero">
+    <section className={`hero ${introComplete ? 'hero--ready' : 'hero--intro'}`} id="hero">
+      <HeroCinematic onComplete={handleIntroComplete} />
+
       <div className="container hero__grid">
         <div className="hero__content">
           <p className="hero__overline section-overline">

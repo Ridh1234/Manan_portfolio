@@ -13,7 +13,11 @@ const NAV_LINKS = [
 
 const SECTION_IDS = ['about', 'deals', 'experience', 'credentials', 'skills'];
 
-export function Navigation() {
+type NavigationProps = {
+  visible?: boolean;
+};
+
+export function Navigation({ visible = true }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const activeId = useScrollSpy(SECTION_IDS);
 
@@ -41,7 +45,7 @@ export function Navigation() {
   };
 
   return (
-    <header className="nav">
+    <header className={`nav ${visible ? 'nav--visible' : 'nav--hidden'}`}>
       <div className="nav__inner">
         <a href="#hero" className="nav__brand" aria-label="Manan Jain - Home">
           <span className="nav__brand-mark" aria-hidden="true">

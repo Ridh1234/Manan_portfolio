@@ -1,3 +1,4 @@
+import { useCallback, useState } from 'react';
 import { Navigation } from './components/Navigation/Navigation';
 import { Hero } from './components/Hero/Hero';
 import { DealPortfolio } from './components/DealPortfolio/DealPortfolio';
@@ -6,16 +7,23 @@ import { Credentials } from './components/Credentials/Credentials';
 import { Skills } from './components/Skills/Skills';
 import { About } from './components/About/About';
 import { Contact } from './components/Contact/Contact';
+import { isHeroIntroComplete } from './utils/heroIntro';
 
 function App() {
+  const [heroIntroComplete, setHeroIntroComplete] = useState(isHeroIntroComplete);
+
+  const handleHeroIntroComplete = useCallback(() => {
+    setHeroIntroComplete(true);
+  }, []);
+
   return (
     <>
       <a href="#hero" className="skip-link">
         Skip to content
       </a>
-      <Navigation />
+      <Navigation visible={heroIntroComplete} />
       <main>
-        <Hero />
+        <Hero introComplete={heroIntroComplete} onIntroComplete={handleHeroIntroComplete} />
         <About />
         <DealPortfolio />
         <Experience />
